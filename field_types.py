@@ -49,7 +49,7 @@ def str_field(operator: str, const: str, null_allowed: bool):
             '<': lambda x: x < const,
             '=': lambda x: x == const,
             '!': lambda x: x != const,
-            'contains': lambda x: const.count(x) > 0,
+            'contains': lambda x: x.count(const) > 0,
         }[operator](variable)
     return cmp
 
